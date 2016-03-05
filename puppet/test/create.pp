@@ -5,7 +5,7 @@ Ec2_securitygroup {
 
 Ec2_instance {
   region            => 'us-east-1',
-  availability_zone => 'us-east-1',
+  availability_zone => 'us-east-1b',
 }
 
 Elb_loadbalancer {
@@ -79,7 +79,7 @@ ec2_instance { 'db-1':
 
 elb_loadbalancer { 'lb-1':
   ensure             => present,
-  availability_zones => ['us-east-1'],
+  availability_zones => ['us-east-1b'],
   instances          => ['web-1', 'web-2'],
   listeners          => [{
     protocol           => 'tcp',

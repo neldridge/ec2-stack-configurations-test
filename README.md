@@ -19,4 +19,8 @@ aws_access_key_id = your_access_key_id
 aws_secret_access_key = your_secret_access_key
 
 ```
-
+* Add proper availability zones and regions
+```
+aws ec2 describe-regions
+aws ec2 describe-availability-zones --region us-east-1
+```
