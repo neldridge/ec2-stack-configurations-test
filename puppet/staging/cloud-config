@@ -1,0 +1,15 @@
+#cloud-config
+repo_update: true
+repo_upgrade: all
+
+runcmd: 
+- rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm
+- sed -i "s/\[amzn-main\]/[amzn-main]\r\nexclude=puppet* facter/g" /etc/yum.repos.d/amzn-main.repo
+
+packages:
+- puppet
+
+# Puppet should be installed, need to update /etc/hosts
+# and find a way to authorize
+# use puppet to master IP in tag
+# vminit script to pull that master IP from tag, and throw it in hosts file. 

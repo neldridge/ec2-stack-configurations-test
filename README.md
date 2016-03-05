@@ -24,3 +24,18 @@ aws_secret_access_key = your_secret_access_key
 aws ec2 describe-regions
 aws ec2 describe-availability-zones --region us-east-1
 ```
+
+
+# TODO
+So, we can launch an EC2 instance with the configurations above-- then use an init script with "user data" on EC2 (not sure how to configure this with puppet yet, the variable is there.. but do we specify a file and it uploads it? or does it need to be a URL to download? or what)
+
+Once we have an init script, we can use an AMI that has puppet pre-installed.. we just need a script like in the URL below, to configure the hosts file to the puppet master... Then it'll automatically fetch what it needs to from the puppet master and we don't need to touch it at all.
+
+http://www.knowceantech.com/2012/08/let-userdata-tell-puppet-how-to-configure-your-cloud-vms/
+
+
+
+# Cloud Init
+This seems to be the way to go. 
+
+Specify yum repo: https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
