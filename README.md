@@ -38,4 +38,4 @@ http://www.knowceantech.com/2012/08/let-userdata-tell-puppet-how-to-configure-yo
 # Cloud Init
 This seems to be the way to go. 
 
-Specify yum repo: https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+Specify yum repo: https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm

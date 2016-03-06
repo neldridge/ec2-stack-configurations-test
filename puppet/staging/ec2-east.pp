@@ -33,9 +33,11 @@ ec2_instance { 'staging-1':
   tags            => {
     department 	=> 'engineering',
     project    	=> 'cloud',
-    environment => 'staging',
     location 	=> 'east',
     created_by 	=> $::id,
+    master		=> $servername,
+    environment => $environment,
+
   },
   user_data		  => ''
 }

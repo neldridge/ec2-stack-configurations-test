@@ -9,6 +9,8 @@ runcmd:
 packages:
 - puppet
 
+
+
 # Puppet should be installed, need to update /etc/hosts
 # and find a way to authorize
 # use puppet to master IP in tag
